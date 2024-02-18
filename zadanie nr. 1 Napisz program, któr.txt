@@ -1,0 +1,48 @@
+// zadanie nr. 1 Napisz program, który sprawdzi ile jest liczb pierwszych w zakresie 0 – 100.
+for (int A = 2; A <= 100; A++)
+{
+    for (int B = 2; B < A; B++)
+    {
+
+        if (A % B != 0)
+        {
+            Console.WriteLine($"{A}");
+        }
+
+    }
+}
+for (int A = 2; A <= 100; A++)
+{
+    bool isPrime = true;
+    for (int B = 2; B < A; B++)
+    {
+        if (A % B == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime)
+    {
+        Console.WriteLine($"{A}");
+    }
+}
+int Aa = 2;
+while (Aa <= 100)
+{
+    int B = 1;
+    int divisors = 0;
+    while (B <= Aa)
+    {
+        if (Aa % B == 0)
+        {
+            divisors++;
+        }
+        B++;
+    }
+    if (divisors == 2)
+    {
+        Console.WriteLine($"{Aa}");
+    }
+    Aa++;
+}
